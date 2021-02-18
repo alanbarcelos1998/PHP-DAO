@@ -2,10 +2,22 @@
 
     require_once("config.php");
 
-   $root = new Usuario();
+   //CARREGA UM USUÁRIO 
+//    $root = new Usuario();
+//    $root->loadById(3);
+//    echo $root;
 
-   $root->loadById(3);
+//CARREGA UMA LISTA DE USUÁRIOS
+//$lista = Usuario::getList();
+//echo json_encode($lista);
 
-   echo $root;
+//CARREGA UMA LISTA DE USUARIOS BUSCANDO PELO LOGIN
+// $search = Usuario::search("p");
+// echo json_encode($search);
+
+//CARREGA UM USUÁRIO USANDO O LOGIN E A SENHA
+$usuario = new Usuario();
+$usuario->login("jose", "jose@12345");
+echo $usuario;
 
 ?>
